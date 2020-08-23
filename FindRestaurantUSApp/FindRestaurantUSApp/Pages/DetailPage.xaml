@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FindRestaurantUSApp.Pages.DetailPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label x:Name="lblname" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lbladdress" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblphone" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="lblcuisines" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+            <Image x:Name="imgfeatured_image" />
+            <ListView x:Name="lvreviews" >
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding text}" />
+                            
+                            
+                        </StackLayout> 
+                        
+                    </ViewCell>
+
+                </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            <Button x:Name="btnreview" Text="Write a Review" Clicked="btnreview_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
